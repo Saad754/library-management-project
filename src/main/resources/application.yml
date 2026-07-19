@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: library
+  profiles:
+    active: prod
+
+logging:
+  level:
+    com.example.library: INFO
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+library:
+  max-books: 3
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+library:
+  max-books: 1000
