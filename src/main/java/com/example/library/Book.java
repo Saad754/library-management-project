@@ -6,11 +6,13 @@ public class Book {
     private String author;
     private String category;
     private Integer id;
+    private String availability= "Available";
     public Book(String title, String author, String category, Integer id) {
         this.title = title;
         this.author = author;
         this.category = category;
         this.id = id;
+
     }
     public String getTitle() {
         return title;
@@ -35,5 +37,13 @@ public class Book {
     }
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public String getAvailability() {
+        return availability;
+    }
+
+    public void setAvailability(String availability) {
+        this.availability = availability;
     }
 }

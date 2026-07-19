@@ -3,7 +3,8 @@ spring:
     name: library
   profiles:
     active: prod
-
+library:
+  loan-period-days: 14
 logging:
   level:
     com.example.library: INFO
