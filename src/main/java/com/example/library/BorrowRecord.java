@@ -1,5 +1,6 @@
 package com.example.library;
 
+import java.time.Clock;
 import java.time.LocalDate;
 
 public class BorrowRecord {
@@ -10,9 +11,8 @@ public class BorrowRecord {
     private LocalDate dueDate;
     private LocalDate returnDate;
     private String status;
-
-    public BorrowRecord(int bookId,int userId,LocalDate dueDate) {
-        this.borrowDate = LocalDate.now();
+    public BorrowRecord(int bookId,int userId,LocalDate dueDate, Clock clock) {
+        this.borrowDate = LocalDate.now(clock);
         this.bookId = bookId;
         this.userId = userId;
         this.dueDate = dueDate;
